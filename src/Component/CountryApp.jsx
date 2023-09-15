@@ -17,7 +17,7 @@ const CountryApp = () => {
     }
   }, [data]);
   const handleRemoveCountry = (countryName) => {
-    setCountries((prev) =>
+    setFilterdCountries((prev) =>
       prev.filter((country) => country.name.common !== countryName)
     );
   };
@@ -44,7 +44,7 @@ const CountryApp = () => {
       />
       {countries && (
         <Countries
-        filterdCountries={filterdCountries}
+          filterdCountries={filterdCountries}
           handleRemoveCountry={handleRemoveCountry}
         />
       )}
